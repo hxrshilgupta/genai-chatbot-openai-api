@@ -1,6 +1,16 @@
 import streamlit as st
 from PyPDF2 import PdfReader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain.embeddings.openai import OpenAIEmbeddings
+from dotenv import load_dotenv  # Import dotenv to load environment variables
+import os  # Import os to access environment variables
+
+# Load environment variables from .env file
+load_dotenv()
+openai_api_key = os.getenv("OPENAI_API_KEY")
+
+if not openai_api_key:
+    st.error("OpenAI API key is missing. Please set it in the .env file.")
 
 # Upload PDF files
 
