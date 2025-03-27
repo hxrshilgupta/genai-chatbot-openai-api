@@ -1,9 +1,9 @@
 import streamlit as st
 from PyPDF2 import PdfReader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.embeddings.openai import OpenAIEmbeddings
-from dotenv import load_dotenv  # Import dotenv to load environment variables
-import os  # Import os to access environment variables
+from langchain.embeddings.openai import OpenAIEmbeddings  # Ensure correct import
+from dotenv import load_dotenv
+import os
 
 # Load environment variables from .env file
 load_dotenv()
